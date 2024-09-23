@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run Verilog",
+        "type": "shell",
+        "command": "iverilog",
+        "args": [
+          "-o",
+          "${fileDirname}/output.vvp",
+          "${file}"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": [],
+        "detail": "Compiling Verilog using Icarus Verilog"
+      },
+      {
+        "label": "Simulate Verilog",
+        "type": "shell",
+        "command": "vvp",
+        "args": [
+          "${fileDirname}/output.vvp"
+        ],
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        },
+        "problemMatcher": [],
+        "detail": "Running Verilog simulation using vvp"
+      }
+    ]
+  }
+  
