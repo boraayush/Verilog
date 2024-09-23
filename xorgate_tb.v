@@ -1,3 +1,5 @@
+//Git Check
+
 module xorgate_tb;
   reg t_a,t_b;
   wire t_c;
